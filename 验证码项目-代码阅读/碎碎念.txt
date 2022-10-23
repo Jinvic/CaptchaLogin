@@ -1,0 +1,24 @@
+2022-10-23 
+01:42
+关于开发技术&框架：
+本来以为就是个jsp，看看页面设计，带点hrml，javascript,css。
+前端不懂，先放一边，在看代码，乍一看是java，翻一翻已经看到了SequoiaDB，log4j，又发现是Spring框架，没想到跳出maven又落到另一个坑。
+尽量多搞懂些东西吧，读代码我老本行了。
+
+想装个Spring方便看源码，500M，速度也慢，不想挂热点了，等下午去蹭网再下。
+
+2:07
+想照着原样做一遍，各种东西装上，代码一点点搞懂再转过来，中途改点东西试试
+
+2:47
+说只看算法，log4j先略过，就是个日志
+重建项目看时间够不够，建不起算了
+
+17:53
+spring官网下的spring tool suite 4是个集成了spring的eclipse，相当于另一个eclipse
+但我要的是在自己的eclipse上装spring
+去找教程Spring Tool Suite 3项目，只到适配到e4.19，我的eclipse是4.25
+折腾半天，在eclipse market里装了两个，不知道能不能用
+
+SlideVerifyToolkit.java最后又用Base64类将图片编码成字符串，再装一个apache-commons-codec-1.15
+SlideVerifyToolkit.java算是读完了

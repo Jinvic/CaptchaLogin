@@ -1,0 +1,9 @@
+<!--<style type="text/css">
+	body
+	{
+         background-image: url("/style/bg1.jpg");
+         background-attachment: fixed;
+         background-size: cover;
+   	}
+	</style>-->
+/*background-image:url("./bg1.jpg");*/
