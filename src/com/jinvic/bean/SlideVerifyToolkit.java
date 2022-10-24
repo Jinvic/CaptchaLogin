@@ -264,7 +264,9 @@ public class SlideVerifyToolkit {
 					int g = (0xff & (rgb_ori >> 8));
 					int b = (0xff & (rgb_ori >> 16));
 					rgb_ori = r + (g << 8) + (b << 16) + (150 << 24);
-					ori_copy_image.setRGB(x + i, y + j, rgb_ori);
+//					ori_copy_image.setRGB(x + i, y + j, rgb_ori);
+					//进行白色处理
+					ori_copy_image.setRGB(x + i, y + j, 255);
 				} else {
 					// do nothing
 				}

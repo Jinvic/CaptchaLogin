@@ -31,3 +31,7 @@ SlideVerifyToolkit.java算是读完了
 19.08
 后端几个java文件看完了
 好像没用到他那个User.java和SequoiaDB数据库
+
+20:57
+试着改下后端
+把滑块验证码的图片改改
