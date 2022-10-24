@@ -22,3 +22,12 @@ spring官网下的spring tool suite 4是个集成了spring的eclipse，相当于
 
 SlideVerifyToolkit.java最后又用Base64类将图片编码成字符串，再装一个apache-commons-codec-1.15
 SlideVerifyToolkit.java算是读完了
+
+2022-10-24
+10:20
+昨晚赶进度，把原项目的前端改改交了
+这个项目还继续做，至少先把代码读完做过ppt
+
+19.08
+后端几个java文件看完了
+好像没用到他那个User.java和SequoiaDB数据库

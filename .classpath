@@ -13,7 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="D:/apache-commons-codec-1.15/commons-codec-1.15.jar" sourcepath="D:/apache-commons-codec-1.15/commons-codec-1.15-sources.jar"/>
-	<classpathentry kind="lib" path="D:/apache-commons-codec-1.15/commons-codec-1.15-sources.jar"/>
+	<classpathentry kind="lib" path="Webcontent/WEB-INF/lib"/>
 	<classpathentry kind="output" path="Webcontent/WEB-INF/classes"/>
 </classpath>
