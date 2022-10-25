@@ -1,10 +1,10 @@
 package com.jinvic.bean;
 
 import java.awt.BasicStroke;
-import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
+import java.awt.Transparency;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -84,8 +84,12 @@ public class SlideVerifyToolkit {
 
 		// 抠图模板
 		BufferedImage newImage = new BufferedImage(WIDTH, HEIGHT, imageTemplate.getType());
+//				BufferedImage newImage = ImageIO.read(templateFile);
 		Graphics2D graphics = newImage.createGraphics();
-		graphics.setBackground(Color.white);
+		// 设置图片透明
+		newImage = graphics.getDeviceConfiguration().createCompatibleImage(WIDTH, HEIGHT, Transparency.TRANSLUCENT);
+//				graphics.setBackground(Color.white);
+		graphics = newImage.createGraphics();
 
 		// 从源背景图片中在随机位置x,y处获取与抠图模板大小一致的区域图
 		BufferedImage targetImageNoDeal = getTargetArea(X, Y, WIDTH, HEIGHT, oriis, oriFiletype);
@@ -192,8 +196,12 @@ public class SlideVerifyToolkit {
 		for (int i = 0; i < templateImageData.length; i++) {
 			// 模板图片高度
 			for (int j = 0; j < templateImageData[0].length; j++) {
-				// 如果模板图像当前像素点不是白色 copy源文件信息到目标图片中
 				int rgb = templateImageData[i][j];
+//				如果模板图像当前像素点透明，不进行染色
+				if ((rgb >> 24) == 0x00) {
+					continue;
+				}
+				// 如果模板图像当前像素点不是白色 copy源文件信息到目标图片中
 				if (rgb != 16777215 && rgb <= 0 && i < originalWidth && j < originalHeight) {
 					targetImage.setRGB(i, j, oriImageData[i][j]);
 				}
@@ -257,6 +265,10 @@ public class SlideVerifyToolkit {
 		for (int i = 0; i < templateImageData.length; i++) {
 			for (int j = 0; j < templateImageData[0].length - 5; j++) {
 				int rgb = templateImage.getRGB(i, j);
+//				如果模板图像当前像素点透明，不进行染色
+				if ((rgb >> 24) == 0x00) {
+					continue;
+				}
 				// 对源文件备份图像(x+i,y+j)坐标点进行透明处理
 				if (rgb != 16777215 && rgb <= 0 && x + i < origWidth && y + j < origHeight) {
 					int rgb_ori = ori_copy_image.getRGB(x + i, y + j);
