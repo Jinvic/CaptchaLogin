@@ -128,6 +128,7 @@ public class LoginController {
 		} else {// 原始图片多一些
 			filePath = "static/targets/";
 			picNo = random.nextInt(23) + 1;
+//			picNo = 0;
 		}
 
 		StringBuffer fileNameBuffer = new StringBuffer();
